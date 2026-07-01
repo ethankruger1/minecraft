@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Voxelcraft — a Minecraft clone</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%237cba34'/></svg>" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <!-- Crosshair -->
+  <div id="crosshair">
+    <div class="cross-h"></div>
+    <div class="cross-v"></div>
+  </div>
+
+  <!-- Hotbar -->
+  <div id="hotbar"></div>
+
+  <!-- Hand / held block view -->
+  <div id="hand-label"></div>
+
+  <!-- FPS / debug -->
+  <div id="hud">
+    <div id="fps"></div>
+    <div id="coords"></div>
+  </div>
+
+  <!-- Start / pause overlay -->
+  <div id="overlay">
+    <div class="panel">
+      <h1>VOXELCRAFT</h1>
+      <p class="subtitle">A Minecraft clone — Creative Mode</p>
+      <button id="play-btn">Click to Play</button>
+      <div class="controls">
+        <div class="col">
+          <h3>Move</h3>
+          <ul>
+            <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Walk</li>
+            <li><kbd>Space</kbd> Jump / Fly up</li>
+            <li><kbd>Shift</kbd> Sneak / Fly down</li>
+            <li><kbd>Space</kbd><kbd>Space</kbd> Toggle fly</li>
+            <li><kbd>Ctrl</kbd> Sprint</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Build</h3>
+          <ul>
+            <li><kbd>L-Click</kbd> Break block</li>
+            <li><kbd>R-Click</kbd> Place block</li>
+            <li><kbd>M-Click</kbd> Pick block</li>
+            <li><kbd>1</kbd>–<kbd>9</kbd> / Scroll Select</li>
+            <li><kbd>Esc</kbd> Pause</li>
+          </ul>
+        </div>
+      </div>
+      <p class="hint">Loading world…</p>
+    </div>
+  </div>
+
+  <div id="touch-controls" class="hidden">
+    <div id="move-stick" class="stick"><div class="nub"></div></div>
+    <div id="look-pad"></div>
+    <div class="touch-btns">
+      <button id="btn-jump">▲</button>
+      <button id="btn-fly">✈</button>
+      <button id="btn-down">▼</button>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./libs/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
