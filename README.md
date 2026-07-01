@@ -56,5 +56,7 @@ src/
 
 ## Deployment
 
-`.github/workflows/deploy.yml` publishes the repo to GitHub Pages on every push
-to the deployment branch via GitHub Actions.
+Served straight from this branch by GitHub Pages. In **Settings → Pages →
+Build and deployment**, set **Source: Deploy from a branch**, pick this branch
+with the **`/ (root)`** folder, and Pages hosts the static files as-is
+(a `.nojekyll` file is included so nothing is pre-processed).
